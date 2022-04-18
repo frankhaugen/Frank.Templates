@@ -5,6 +5,10 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfWithoutXaml", "WpfWithoutXaml\WpfWithoutXaml.csproj", "{E8C7730B-68BF-4D74-ADDB-F00B791B173F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanMonoGame", "CleanMonoGame\CleanMonoGame.csproj", "{97EA7B71-28D5-4242-AF10-97C3B4224AFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoGameGame", "MonoGameGame\MonoGameGame.csproj", "{D9C549FA-3329-4FDD-918C-85008D7CCE2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{E8C7730B-68BF-4D74-ADDB-F00B791B173F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8C7730B-68BF-4D74-ADDB-F00B791B173F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8C7730B-68BF-4D74-ADDB-F00B791B173F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97EA7B71-28D5-4242-AF10-97C3B4224AFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97EA7B71-28D5-4242-AF10-97C3B4224AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97EA7B71-28D5-4242-AF10-97C3B4224AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97EA7B71-28D5-4242-AF10-97C3B4224AFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9C549FA-3329-4FDD-918C-85008D7CCE2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9C549FA-3329-4FDD-918C-85008D7CCE2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9C549FA-3329-4FDD-918C-85008D7CCE2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9C549FA-3329-4FDD-918C-85008D7CCE2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
