@@ -1,77 +1,56 @@
 ﻿
+using Microsoft.Extensions.Options;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 using MonoGame.Shapes;
 
-using Color = Microsoft.Xna.Framework.Color;
+using MonoGameGame.Models.BasicShapes;
+using MonoGameGame.Models.Configuration;
 
 namespace MonoGameGame;
 
-internal class GameWindow : Game
+internal class GameWindow : Game, IGameWindow
 {
-    private readonly GraphicsDeviceManager _graphicsDeviceManager;
+    private readonly IOptions<GameOptions> _gameOptions;
 
-    public GameWindow() : base()
+    public Vector2 Center { get; private set; }
+    public Game Game => this;
+
+    private SpriteBatch _sprites;
+    private SpriteFont _spriteFont;
+
+    public GameWindow(IOptions<GameOptions> gameOptions) : base()
     {
-        _graphicsDeviceManager = new GraphicsDeviceManager(this);
+        _gameOptions = gameOptions;
         Content.RootDirectory = nameof(Content);
-        IsFixedTimeStep = true;
-        IsMouseVisible = true;
-    }
-
-    protected override void Initialize()
-    {
-        base.Initialize();
+        IsFixedTimeStep = _gameOptions.Value.FixedTimeStep;
+        IsMouseVisible = _gameOptions.Value.ShowPointer;
+        Window.AllowUserResizing = _gameOptions.Value.AllowUserResizing;
+        Window.ClientSizeChanged += (_, _) => Center = GraphicsDevice.Viewport.Bounds.Center.ToVector2();
     }
 
     protected override void LoadContent()
     {
-        base.LoadContent();
-    }
+        _sprites = GraphicsDevice.CreateSpriteBatch();
+        _spriteFont = Content.Load<SpriteFont>("Text");
 
-    protected override void UnloadContent()
-    {
-        base.UnloadContent();
+        base.LoadContent();
     }
 
     protected override void Update(GameTime gameTime)
     {
-
-        var spriteBatch = new SpriteBatch(GraphicsDevice);
-
-        //Texture2D pixel;
-        //pixel = new Texture2D(spriteBatch.GraphicsDevice, 1, 1, false, SurfaceFormat.Color);
-        //pixel.SetData(new[] { Color.White });
-
-        spriteBatch.Begin();
-
-        //var rectangle = new Square(new Vector2(200, 200), 100f, 100f, Color.Chartreuse);
-
-        //rectangle.Draw(GraphicsDevice);
-
-        var center = GraphicsDevice.Viewport.Bounds.Center.ToVector2();
-
-        spriteBatch.DrawCircle(center, 100, 6, Color.Aqua, 5f);
-
-        //GraphicsDevice.Draw(rectangle.GetVertices());
-
-        //spriteBatch.Draw(pixel,
-        //    new Vector2(100, 100),
-        //    null,
-        //    Color.Aqua,
-        //    Single.Epsilon,
-        //    new Vector2(0, (float)pixel.Height / 2),
-        //    new Vector2(100, 100),
-        //    SpriteEffects.None,
-        //    0);
-        spriteBatch.End();
-
+        _sprites.Begin();
+        var rectangle = new Rectangle(Center.ToPoint(), new Point(100));
+        _sprites.DrawPolygon(Center, rectangle.GetPolygon(), Color.IndianRed);
+        _sprites.DrawCircle(Center, 100, 6, Color.Aqua, 5f);
+        _sprites.End();
         base.Update(gameTime);
     }
 
-    protected override void Draw(GameTime gameTime)
-    {
-        base.Draw(gameTime);
-    }
+}
+
+public static class GraphicsDeviceExtensions
+{
+    public static SpriteBatch CreateSpriteBatch(this GraphicsDevice graphicsDevice) => new SpriteBatch(graphicsDevice);
 }
