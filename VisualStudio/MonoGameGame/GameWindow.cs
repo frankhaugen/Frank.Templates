@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 using MonoGame.Shapes;
 
-using MonoGameGame.Models.BasicShapes;
+using MonoGameGame.Extensions;
 using MonoGameGame.Models.Configuration;
 
 namespace MonoGameGame;
