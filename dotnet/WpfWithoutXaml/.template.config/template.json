@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Frank R. Haugen",
+  "classifications": [ "Common", "WPF" ],
+  "identity": "Frank.Templates.WpfWithoutXaml",
+  "name": "Wpf Without Xaml",
+  "description": "For the crazy people that love WPF but don't want to write a lot of XAML-code",
+  "shortName": "wpfwithoutxaml",
+  "sourceName": "WpfWithoutXaml",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  }
+}
