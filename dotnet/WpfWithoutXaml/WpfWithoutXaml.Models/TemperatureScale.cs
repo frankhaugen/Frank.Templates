@@ -1,9 +1,8 @@
-﻿namespace WpfWithoutXaml.Models
+﻿namespace WpfWithoutXaml.Models;
+
+public enum TemperatureScale
 {
-    public enum TemperatureScale
-    {
-        Celsius,
-        Kelvin,
-        Farenheight
-    }
+    Celsius,
+    Kelvin,
+    Farenheight
 }

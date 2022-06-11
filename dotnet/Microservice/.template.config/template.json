@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Frank R. Haugen",
+  "classifications": [ "Common", "Microservice" ],
+  "identity": "Microservice",
+  "name": "Microservice",
+  "description": "Microservice",
+  "shortName": "microservice",
+  "sourceName": "Microservice",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  }
+}
