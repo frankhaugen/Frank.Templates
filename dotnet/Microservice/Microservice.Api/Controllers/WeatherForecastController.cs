@@ -4,22 +4,17 @@ namespace Microservice.Api.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class WeatherForecastController : ControllerBase
+public class CompaniesController : ControllerBase
 {
-    private static readonly string[] Summaries = new[]
-    {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
+    private readonly ILogger<CompaniesController> _logger;
 
-    private readonly ILogger<WeatherForecastController> _logger;
-
-    public WeatherForecastController(ILogger<WeatherForecastController> logger)
+    public CompaniesController(ILogger<CompaniesController> logger)
     {
         _logger = logger;
     }
 
     [HttpGet(Name = "GetWeatherForecast")]
-    public IEnumerable<WeatherForecast> Get()
+    public IEnumerable<WeatherForecast> Get(string? companyName = null, string? town = null, int currentPage = 0, int pageSize = 20)
     {
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast
         {

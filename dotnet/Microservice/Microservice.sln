@@ -1,25 +1,28 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice", "Microservice\Microservice.csproj", "{89EEE06C-FBF5-45DD-B386-2A4FEFDEA8FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice", "Microservice\Microservice.csproj", "{89EEE06C-FBF5-45DD-B386-2A4FEFDEA8FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice.Api", "Microservice.Api\Microservice.Api.csproj", "{F7EAA20E-3831-4CEE-A765-D9E192C92E08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Api", "Microservice.Api\Microservice.Api.csproj", "{F7EAA20E-3831-4CEE-A765-D9E192C92E08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice.Client", "Microservice.Client\Microservice.Client.csproj", "{CB930182-A05E-4F97-ACF7-CFC1C14E3E04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Client", "Microservice.Client\Microservice.Client.csproj", "{CB930182-A05E-4F97-ACF7-CFC1C14E3E04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice.Client.Models", "Microservice.Client.Models\Microservice.Client.Models.csproj", "{93898F7D-B8A0-4CBA-B09B-62F8CA474A90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Client.Models", "Microservice.Client.Models\Microservice.Client.Models.csproj", "{93898F7D-B8A0-4CBA-B09B-62F8CA474A90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice.Tests", "Microservice.Tests\Microservice.Tests.csproj", "{821F71ED-A3B1-4A1B-A9C7-533371C994A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Tests", "Microservice.Tests\Microservice.Tests.csproj", "{821F71ED-A3B1-4A1B-A9C7-533371C994A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{47E0B774-6EA8-43CE-81E6-10D7B0F69831}"
+	ProjectSection(SolutionItems) = preProject
+		nuget.config = nuget.config
+		readme.md = readme.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{89EEE06C-FBF5-45DD-B386-2A4FEFDEA8FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -42,5 +45,11 @@ Global
 		{821F71ED-A3B1-4A1B-A9C7-533371C994A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{821F71ED-A3B1-4A1B-A9C7-533371C994A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{821F71ED-A3B1-4A1B-A9C7-533371C994A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E45DA45F-0FBA-4E04-BF84-4A5F8C862B6F}
 	EndGlobalSection
 EndGlobal
