@@ -9,8 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="RandomTestValues" Version="2.1.1" />
-      <PackageReference Include="RestSharp" Version="108.0.1" />
+        <PackageReference Include="RestSharp" Version="108.0.1" />
     </ItemGroup>
 
 </Project>

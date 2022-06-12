@@ -1,4 +1,4 @@
-﻿namespace Microservice.Models.Company
+﻿namespace Microservice.Models.Companies
 {
     public class Company
     {

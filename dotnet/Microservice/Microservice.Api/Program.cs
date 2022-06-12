@@ -1,12 +1,19 @@
+using Microservice.Api.MappingProfiles;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddAutoMapper(x =>
+{
+    x.AddProfile<CompanyProfile>();
+});
 builder.Services.AddSwaggerGen(x =>
 {
     x.IgnoreObsoleteActions();
     x.OrderActionsBy(y => y.RelativePath);
-    x.TagActionsBy(y => y.GroupName);
 });
+
+builder.Services.AddScoped<ICompanyService, CompanyService>();
 
 var app = builder.Build();
 app.UseSwagger();

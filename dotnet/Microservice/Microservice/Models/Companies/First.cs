@@ -1,4 +1,4 @@
-﻿namespace Microservice.Models.CompanyList
+﻿namespace Microservice.Models.Companies
 {
     public class First
     {

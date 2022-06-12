@@ -1,6 +1,6 @@
-﻿namespace Microservice.Models.CompanyList
+﻿namespace Microservice.Models.Companies
 {
-    public class Last
+    public class Next
     {
         [JsonPropertyName("href")] public string? Href { get; set; }
     }

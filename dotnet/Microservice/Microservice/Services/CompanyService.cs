@@ -1,8 +1,7 @@
-﻿using Microservice.Models.Company;
-using Microservice.Models.CompanyList;
+﻿using Microservice.Models.Companies;
 using RestSharp;
 
-public class CompanyService
+public class CompanyService : ICompanyService
 {
     private readonly string _baseUrl = "https://data.brreg.no/enhetsregisteret/api";
 
