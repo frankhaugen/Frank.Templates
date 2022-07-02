@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Frank R. Haugen",
+  "classifications": [ "Common", "WPF" ],
+  "identity": "template",
+  "name": "Template",
+  "description": "Let's see if we can't create a template file",
+  "shortName": "template",
+  "sourceName": "Template",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  }
+}

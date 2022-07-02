@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Frank R. Haugen",
+  "classifications": [ "Common", "MonoGame" ],
+  "identity": "Frank.Templates.MonoGame",
+  "name": "MonoGame",
+  "description": "Monogame ",
+  "shortName": "monogame",
+  "sourceName": "MonoGame",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  }
+}
