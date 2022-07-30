@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using MonoGame.Shapes;
 using MonoGameTemplate.Models.BasicShapes;
 
 namespace MonoGameTemplate.Extensions;

@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Options;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using MonoGame.Shapes;
 using MonoGameTemplate.Extensions;
 using MonoGameTemplate.Models.Configuration;
 

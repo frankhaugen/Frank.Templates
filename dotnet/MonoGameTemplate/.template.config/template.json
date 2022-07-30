@@ -6,7 +6,7 @@
   "name": "MonoGame",
   "description": "Monogame ",
   "shortName": "monogame",
-  "sourceName": "MonoGame",
+  "sourceName": "MonoGameTemplate",
   "tags": {
     "language": "C#",
     "type": "project"

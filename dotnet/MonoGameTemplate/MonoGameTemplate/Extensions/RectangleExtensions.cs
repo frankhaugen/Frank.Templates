@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using MonoGame.Shapes;
 
 namespace MonoGameTemplate.Extensions;
 
