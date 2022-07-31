@@ -1,7 +1,8 @@
-﻿
+﻿using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using MonoGame.Shapes;
 using MonoGameTemplate.Extensions;
 using MonoGameTemplate.Models.Configuration;
@@ -11,16 +12,18 @@ namespace MonoGameTemplate;
 internal class GameWindow : Game, IGameWindow
 {
     private readonly IOptions<GameOptions> _gameOptions;
+	private readonly ILogger<GameWindow> _logger;
 
-    public Vector2 Center { get; private set; }
+	public Vector2 Center { get; private set; }
     public Game Game => this;
 
     private SpriteBatch _sprites;
     private SpriteFont _spriteFont;
 
-    public GameWindow(IOptions<GameOptions> gameOptions) : base()
+    public GameWindow(IOptions<GameOptions> gameOptions, ILogger<GameWindow> logger) : base()
     {
         _gameOptions = gameOptions;
+        _logger = logger;
         Content.RootDirectory = nameof(Content);
         IsFixedTimeStep = _gameOptions.Value.FixedTimeStep;
         IsMouseVisible = _gameOptions.Value.ShowPointer;
@@ -39,35 +42,23 @@ internal class GameWindow : Game, IGameWindow
 
     protected override void Update(GameTime gameTime)
     {
-        _sprites.Begin();
+		if (Keyboard.GetState().IsKeyDown(Keys.Escape))
+		{
+			Exit();
+		}
+		if (Keyboard.GetState().IsKeyDown(Keys.A))
+		{
+			_logger.LogInformation((int)Keys.A, nameof(Keys.A));
+		}
+
+		_sprites.Begin();
         _sprites.DrawPolygon(
             Center,
             new Rectangle(Point.Zero, new Point(50, 50)).GetPolygon(),
             Color.IndianRed);
+		
         _sprites.DrawString(_spriteFont, "This is some text", GraphicsDevice.GetOrigin().ToVector2(), Color.Aqua);
         _sprites.End();
         base.Update(gameTime);
     }
-}
-
-public static class GraphicsDeviceExtensions
-{
-    public static SpriteBatch CreateSpriteBatch(this GraphicsDevice graphicsDevice) => new SpriteBatch(graphicsDevice);
-    public static Point GetOrigin(this GraphicsDevice graphicsDevice) => graphicsDevice.Viewport.GetOrigin();
-}
-
-public static class PolygonExtensions
-{
-    public static IReadOnlyList<Vector2> GetVector2s(this Polygon source) => source.Vertices;
-}
-
-public static class ViewportExtensions
-{
-    public static Point GetOrigin(this Viewport source) => source.Bounds.Location;
-}
-
-public static class GameExtensions
-{
-    public static Point GetOrigin(this Game source) => source.GraphicsDevice.GetOrigin();
-    public static Point GetCenter(this Game source) => source.GraphicsDevice.Viewport.Bounds.Center;
 }

@@ -1,13 +1,11 @@
 using MonoGameTemplate;
 using MonoGameTemplate.Extensions;
 
-IHost host = Host.CreateDefaultBuilder(args)
+var host = Host.CreateDefaultBuilder(args)
     .ConfigureServices((context, services) =>
     {
-        Console.WriteLine(Directory.GetCurrentDirectory());
-        Console.WriteLine(Environment.CurrentDirectory);
-        Console.WriteLine(AppContext.BaseDirectory);
-        Console.WriteLine(context.HostingEnvironment.ContentRootPath);
+        context.HostingEnvironment.ContentRootPath = AppContext.BaseDirectory;
+        Console.WriteLine($"Set {nameof(context.HostingEnvironment.ContentRootPath)} to '{context.HostingEnvironment.ContentRootPath}'");
         services.AddGame(context.Configuration);
         services.AddHostedService<GameHost>();
     })

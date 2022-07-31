@@ -4,7 +4,6 @@ namespace MonoGameTemplate;
 
 public class GameHost : BackgroundService
 {
-
     public static GraphicsDeviceManager Graphics;
 
     private readonly ILogger<GameHost> _logger;
@@ -20,19 +19,16 @@ public class GameHost : BackgroundService
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
         _logger.LogInformation("Game started at: {time}", DateTime.UtcNow);
+        _gameWindow.Exiting += Exit;
         _gameWindow.Run();
     }
 
-    private void Exit(object sender, EventArgs e)
+    private void Exit(object? sender, EventArgs e)
     {
         _gameWindow.Exit();
         _gameWindow.Dispose();
         StopAsync(new CancellationToken()).GetAwaiter().GetResult();
-    }
-
-    public override async Task StopAsync(CancellationToken cancellationToken)
-    {
         _logger.LogInformation("Game stopped at: {time}", DateTime.UtcNow);
-        await base.StopAsync(cancellationToken);
-    }
+        Environment.Exit(0);
+	}
 }
