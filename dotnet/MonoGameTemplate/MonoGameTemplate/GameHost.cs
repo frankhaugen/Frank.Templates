@@ -14,7 +14,7 @@ public class GameHost : BackgroundService
         _logger = logger;
         _gameWindow = gameWindow;
         Graphics = new GraphicsDeviceManager(_gameWindow.Game);
-    }
+	}
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
