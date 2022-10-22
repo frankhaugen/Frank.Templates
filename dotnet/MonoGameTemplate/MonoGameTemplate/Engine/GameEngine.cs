@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using MonoGame.Extended.Input.InputListeners;
 
@@ -20,6 +21,8 @@ public class GameEngine
 		_logger = logger;
 	}
 
+	private ContentManager Content => _gameWindow.Game.Content;
+
 	public void Run()
 	{
 		_gameWindow.Run();
@@ -29,7 +32,7 @@ public class GameEngine
 	{
 		_drawer.Begin();
 
-		_drawer.DrawString(_spriteBatch., "Hello World!", new Vector2(100, 100), Color.White);
+		_drawer.DrawString(Content.Load<SpriteFont>("Text"), "Hello World!", new Vector2(100, 100), Color.White);
 
 		_drawer.End();
 	}
@@ -44,5 +47,3 @@ public class GameEngine
 		_gameWindow.Exit();
 	}
 }
-
-public readonly record struct 

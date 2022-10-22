@@ -16,7 +16,7 @@ public class Drawer : IDrawer
 	}
 
 	public void Begin()
-	{
+	{							  
 		_gameState.Value.SpriteBatch.Begin();
 	}
 
@@ -38,7 +38,6 @@ public class Drawer : IDrawer
 	public void DrawString(SpriteFont spriteFont, string text, Vector2 position, Color color)
 	{
 		_gameState.Value.SpriteBatch.DrawString(spriteFont, text, position, color);
-		
 		//_gameState.Value.SpriteBatch.DrawString(spriteFont, _gameState.Value.GameTime.ElapsedGameTime.ToString(), position, color);
 	}
 
