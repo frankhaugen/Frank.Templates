@@ -1,9 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
-using MonoGameTemplate.Pysics;
 
-namespace MonoGameTemplate;
+namespace MonoGameTemplate.Models;
 
-public class GameObject : IGravityPysics
+public class GameObject
 {
 	public void Accelerate(Vector2 acceleration)
 	{

@@ -1,17 +1,11 @@
-﻿using Microsoft.Extensions.Options;
-using MonoGame.Extended.Input.InputListeners;
-using MonoGameTemplate.Models.Configuration;
+﻿using MonoGame.Extended.Input.InputListeners;
 
 namespace MonoGameTemplate;
 
 public class InputService : IInputService
 {
-	private readonly IOptions<GameState> _options;
-	private readonly ILogger<InputService> _logger;
-
-	public InputService(IOptions<GameState> options)
+	public InputService()
 	{
-		_options = options;
 		GuiKeyboardListener = new KeyboardListener();
 		GuiMouseListener = new MouseListener();
 		GuiGamePadListener = new GamePadListener();

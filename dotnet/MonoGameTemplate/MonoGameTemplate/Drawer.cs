@@ -25,7 +25,7 @@ public class Drawer : IDrawer
 		_gameState.Value.SpriteBatch.End();
 	}
 
-	public void DrawCircl(Vector2 center, float radius, int sides, Color color)
+	public void DrawCircle(Vector2 center, float radius, int sides, Color color)
 	{
 		_gameState.Value.SpriteBatch.DrawCircle(center, radius, sides, color);
 	}
