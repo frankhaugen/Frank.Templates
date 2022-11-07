@@ -9,14 +9,14 @@ namespace MonoGameTemplate;
 public class Drawer : IDrawer
 {
 	private readonly IOptions<GameState> _gameState;
-	
+
 	public Drawer(IOptions<GameState> gameState)
 	{
 		_gameState = gameState;
 	}
 
 	public void Begin()
-	{							  
+	{
 		_gameState.Value.SpriteBatch.Begin();
 	}
 
@@ -38,7 +38,6 @@ public class Drawer : IDrawer
 	public void DrawString(SpriteFont spriteFont, string text, Vector2 position, Color color)
 	{
 		_gameState.Value.SpriteBatch.DrawString(spriteFont, text, position, color);
-		//_gameState.Value.SpriteBatch.DrawString(spriteFont, _gameState.Value.GameTime.ElapsedGameTime.ToString(), position, color);
 	}
 
 	public void DrawLine(Vector2 origin, IEnumerable<Vector2> vertices, Color color)
@@ -47,10 +46,11 @@ public class Drawer : IDrawer
 		foreach (var vertex in vertices)
 		{
 			_gameState.Value.SpriteBatch.DrawLine(previousEnd, vertex, color);
+			previousEnd = vertex;
 		}
 	}
 
-	public void DrawLines(Vector2 start, Vector2 end, Color color)
+	public void DrawLine(Vector2 start, Vector2 end, Color color)
 	{
 		_gameState.Value.SpriteBatch.DrawLine(start, end, color);
 	}

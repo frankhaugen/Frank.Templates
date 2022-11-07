@@ -2,6 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Worker">
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
+        <PackageType>Template</PackageType>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <UserSecretsId>dotnet-MonoGame-61db3d38-bece-42b7-8d86-3102a9cba72e</UserSecretsId>

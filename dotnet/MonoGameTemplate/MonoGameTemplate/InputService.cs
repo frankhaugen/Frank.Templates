@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.Options;
-using Microsoft.Xna.Framework.Input;
 using MonoGame.Extended.Input.InputListeners;
 using MonoGameTemplate.Models.Configuration;
 

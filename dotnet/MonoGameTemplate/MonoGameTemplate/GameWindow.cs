@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.Options;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using MonoGame.Extended.Input.InputListeners;
-using MonoGame.Shapes;
 using MonoGameTemplate.Extensions;
 using MonoGameTemplate.Models.Configuration;
 
@@ -32,10 +32,16 @@ internal class GameWindow : Game, IGameWindow
 		_inputService = inputService;
 
 		Content.RootDirectory = nameof(Content);
+
+		MaxElapsedTime = TimeSpan.FromSeconds(5);
+		TargetElapsedTime = TimeSpan.FromSeconds(0.33);
+
 		IsFixedTimeStep = _gameOptions.Value.FixedTimeStep;
 		IsMouseVisible = _gameOptions.Value.ShowPointer;
 		Window.AllowUserResizing = _gameOptions.Value.AllowUserResizing;
 		Window.ClientSizeChanged += (_, _) => Center = GraphicsDevice.Viewport.Bounds.Center.ToVector2();
+
+		_inputService.GuiKeyboardListener.KeyPressed += GuiKeyboardListenerOnKeyTyped;
 	}
 
 	protected override void LoadContent()
@@ -43,6 +49,7 @@ internal class GameWindow : Game, IGameWindow
 		_spriteFont = Content.Load<SpriteFont>("Text");
 		_gameState.Value.SpriteBatch = GraphicsDevice.CreateSpriteBatch();
 		Center = GraphicsDevice.Viewport.Bounds.Center.ToVector2();
+		BallPosition = GraphicsDevice.Viewport.Bounds.Center.ToVector2();
 		_inputService.GuiMouseListener.MouseMoved += GuiMouseListenerOnMouseMoved;
 		base.LoadContent();
 	}
@@ -50,21 +57,13 @@ internal class GameWindow : Game, IGameWindow
 	private void GuiMouseListenerOnMouseMoved(object? sender, MouseEventArgs e)
 	{
 		MousePosition = e.Position;
-		//_gameState.Value.MousePointerPosition = e.Position;
 	}
-
-	public Vector2 Velocity { get; set; }
-	public Vector2 Position { get; set; }
 
 	protected override void Update(GameTime gameTime)
 	{
-		var updateTime = gameTime.ElapsedGameTime.TotalMilliseconds - _gameState.Value.GameTime.ElapsedGameTime.TotalMilliseconds;
-		var timeScalar = updateTime / 0.5;
-		this.Velocity += this.acceleration * timeScalar;
-		this.Position += this.Velocity;
+		GraphicsDevice.Clear(Color.Black);
 
 		_gameState.Value.GameTime = gameTime;
-		GraphicsDevice.Clear(Color.Black);
 
 		_inputService.GuiMouseListener.Update(gameTime);
 		_inputService.GuiKeyboardListener.Update(gameTime);
@@ -73,15 +72,72 @@ internal class GameWindow : Game, IGameWindow
 
 		_drawer.Begin();
 
-		_drawer.DrawPolygon(Center, new Polygon(new List<Vector2>() { Center, new Vector2(0.001f, 0.002f), Vector2.UnitX }), Color.Beige);
+		//_logger.LogInformation(gameTime.TotalGameTime.ToString());
+		//_logger.LogInformation(gameTime.GetElapsedSeconds().ToString());
 
-		_drawer.DrawPolygon(Center, new Rectangle(Point.Zero, new Point(50, 50)).GetPolygon(), Color.IndianRed);
+		BallPosition = NextPosition(BallPosition, _gameState.Value.GameTime.TotalGameTime.Seconds, 10);
+
+		_drawer.DrawCircl(BallPosition, 10, 42, Color.Aqua);
+		Console.WriteLine(BallPosition.ToString());
 
 		_drawer.DrawString(_spriteFont, MousePosition.ToString(), GraphicsDevice.GetOrigin().ToVector2(), Color.Aqua);
 		_drawer.DrawString(_spriteFont, Center.ToString(), GraphicsDevice.GetOrigin().ToVector2().Add(500, 0), Color.Aqua);
+		_drawer.DrawString(_spriteFont, BallPosition.ToString(), GraphicsDevice.GetOrigin().ToVector2().Add(0, 25), Color.Aqua);
+		//_drawer.DrawString(_spriteFont, gameTime.ElapsedGameTime.ToString(), GraphicsDevice.GetOrigin().ToVector2().Add(300, 0), Color.Aqua);
+		//_drawer.DrawString(_spriteFont, gameTime.TotalGameTime.ToString(), GraphicsDevice.GetOrigin().ToVector2().Add(600, 0), Color.Aqua);
 
 		_drawer.End();
 
 		base.Update(gameTime);
 	}
+
+	private void GuiKeyboardListenerOnKeyTyped(object? sender, KeyboardEventArgs e)
+	{
+		if (e.Key == Keys.Space)
+		{
+			BallPosition = NextPosition(BallPosition, _gameState.Value.GameTime.TotalGameTime.Seconds, 45);
+			_logger.LogInformation(BallPosition.ToString());
+		}
+	}
+
+	public Vector2 BallPosition { get; set; }
+	public float BallLinearVelocity { get; set; }
+
+	Vector2 NextPosition(Vector2 origin, float time, float angle)
+	{
+		var gravity = -9.80665F;
+		var gravityModifier = 0.01F;
+
+		//gravity *= gravityModifier;
+		time *= gravityModifier;
+		//BallLinearVelocity = gravity * time;
+		//origin.Y += BallLinearVelocity * time;
+
+		var Sx = origin.X * MathF.Cos(ToRadian(angle)) * time;
+		var Sy = origin.Y * MathF.Sin(ToRadian(angle)) * time - 0.5F * gravity * MathF.Pow(time, 2);
+
+		return origin.Translate(new Vector2(Sx, Sy));
+	}
+
+	Vector2 NextPositionX(Vector2 origin, float time, float angle)
+	{
+		var gravity = -9.80665F;
+
+		var Sx = origin.X * MathF.Cos(ToRadian(angle)) * time;
+		var Sy = origin.Y * MathF.Sin(ToRadian(angle)) * time - 0.5F * gravity * MathF.Pow(time, 2);
+
+		return origin.Translate(new Vector2(Sx, Sy));
+	}
+
+	Vector2 NextPositionY(Vector2 origin, float instant, float launchAngle, float initialVelocity = 12f)
+	{
+		origin.X = CalculateHorizontalVelocity(instant, initialVelocity, launchAngle);
+		origin.Y = CalculateVerticalVelocity(instant, initialVelocity, launchAngle);
+		return origin;
+	}
+
+	float CalculateHorizontalVelocity(float instant, float initialVelocity, float launchAngle) => initialVelocity * MathF.Cos(ToRadian(launchAngle)) * instant;
+	float CalculateVerticalVelocity(float instant, float initialVelocity, float launchAngle) => initialVelocity * MathF.Sin(ToRadian(launchAngle)) * instant - 0.5F * 9.81F * instant * instant;
+
+	float ToRadian(float angle) => angle * (MathF.PI / 180);
 }
