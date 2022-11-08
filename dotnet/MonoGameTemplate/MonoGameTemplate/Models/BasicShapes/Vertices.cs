@@ -2,4 +2,4 @@
 
 namespace MonoGameTemplate.Models.BasicShapes;
 
-internal readonly record struct Vertices(VertexPositionColor[] VertexArray, int VertexCount, int[] Indicies, int IndexCount);
+public readonly record struct Vertices(VertexPositionColor[] VertexArray, int VertexCount, int[] Indicies, int IndexCount);

@@ -1,8 +1,11 @@
 ﻿using Microsoft.Extensions.Options;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using MonoGame.Shapes;
+using MonoGame.Extended;
+using MonoGame.Extended.Shapes;
+using MonoGameTemplate.Models;
 using MonoGameTemplate.Models.Configuration;
+//using MonoGame.Shapes;
 
 namespace MonoGameTemplate;
 
@@ -28,6 +31,11 @@ public class Drawer : IDrawer
 	public void DrawCircle(Vector2 center, float radius, int sides, Color color)
 	{
 		_gameState.Value.SpriteBatch.DrawCircle(center, radius, sides, color);
+	}
+
+	public void Draw(Drawable drawable)
+	{
+		_gameState.Value.SpriteBatch.DrawPolygon(drawable.center, drawable.polygon, drawable.color);
 	}
 
 	public void DrawPolygon(Vector2 center, Polygon polygon, Color color)
