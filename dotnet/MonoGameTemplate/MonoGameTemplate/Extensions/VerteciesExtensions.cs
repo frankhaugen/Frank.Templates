@@ -26,19 +26,19 @@ public class MyClass
 	public void DrawLine(float x1, float y1, float x2, float y2, Color color)
 	{
 		// Default thickness with no zoom.
-		float thickness = 2f;
+		var thickness = 2f;
 
 
-		float halfThickness = thickness * 0.5f;
+		var halfThickness = thickness * 0.5f;
 
 		// Line edge pointing from "b" to "a".
-		float e1x = x2 - x1;
-		float e1y = y2 - y1;
+		var e1x = x2 - x1;
+		var e1y = y2 - y1;
 
 		Normalize(ref e1x, ref e1y);
 
-		float n1x = -e1y;
-		float n1y = e1x;
+		var n1x = -e1y;
+		var n1y = e1x;
 
 		e1x *= halfThickness;
 		e1y *= halfThickness;
@@ -46,30 +46,30 @@ public class MyClass
 		n1x *= halfThickness;
 		n1y *= halfThickness;
 
-		float e2x = -e1x;
-		float e2y = -e1y;
+		var e2x = -e1x;
+		var e2y = -e1y;
 
-		float n2x = -n1x;
-		float n2y = -n1y;
+		var n2x = -n1x;
+		var n2y = -n1y;
 
-		float qax = x1 + n1x + e2x;
-		float qay = y1 + n1y + e2y;
+		var qax = x1 + n1x + e2x;
+		var qay = y1 + n1y + e2y;
 
-		float qbx = x2 + n1x + e1x;
-		float qby = y2 + n1y + e1y;
+		var qbx = x2 + n1x + e1x;
+		var qby = y2 + n1y + e1y;
 
-		float qcx = x2 + n2x + e1x;
-		float qcy = y2 + n2y + e1y;
+		var qcx = x2 + n2x + e1x;
+		var qcy = y2 + n2y + e1y;
 
-		float qdx = x1 + n2x + e2x;
-		float qdy = y1 + n2y + e2y;
+		var qdx = x1 + n2x + e2x;
+		var qdy = y1 + n2y + e2y;
 
 		this.DrawQuadFill(qax, qay, qbx, qby, qcx, qcy, qdx, qdy, color);
 	}
 
 	public static void Normalize(ref float x, ref float y)
 	{
-		float invLen = 1f / MathF.Sqrt(x * x + y * y);
+		var invLen = 1f / MathF.Sqrt(x * x + y * y);
 		x *= invLen;
 		y *= invLen;
 	}

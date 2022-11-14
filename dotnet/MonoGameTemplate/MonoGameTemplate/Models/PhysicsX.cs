@@ -1,6 +1,6 @@
 ﻿namespace MonoGameTemplate.Models;
 
-public class Physics
+public class PhysicsX
 {
 	//----------------------------------------------------------------------------------------------------//
 	// Initialize the global variables required for the simulation.

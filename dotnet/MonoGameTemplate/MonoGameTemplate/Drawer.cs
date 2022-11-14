@@ -5,7 +5,6 @@ using MonoGame.Extended;
 using MonoGame.Extended.Shapes;
 using MonoGameTemplate.Models;
 using MonoGameTemplate.Models.Configuration;
-//using MonoGame.Shapes;
 
 namespace MonoGameTemplate;
 
