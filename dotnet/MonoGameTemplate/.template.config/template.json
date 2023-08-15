@@ -9,6 +9,6 @@
   "sourceName": "MonoGameTemplate",
   "tags": {
     "language": "C#",
-    "type": "project"
+    "type": "solution"
   }
 }
