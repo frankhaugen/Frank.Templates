@@ -13,6 +13,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Templates.NoXaml.Solu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Templates.NoXaml.Solution.Core", "Frank.Templates.NoXaml.Solution.Core\Frank.Templates.NoXaml.Solution.Core.csproj", "{2C8B3BC4-0D95-4CD5-AC45-12231ED2A62E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{F59CB151-AD79-4950-8E69-5FF65A5ECEB2}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		build.ps1 = build.ps1
+		Directory.Build.props = Directory.Build.props
+		install.ps1 = install.ps1
+		nuget.config = nuget.config
+		push.ps1 = push.ps1
+		README.md = README.md
+		test.ps1 = test.ps1
+		uninstall.ps1 = uninstall.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
