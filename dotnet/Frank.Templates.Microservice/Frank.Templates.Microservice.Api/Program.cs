@@ -1,4 +1,5 @@
-using Microservice.Api.MappingProfiles;
+using Frank.Templates.Microservice.Api.MappingProfiles;
+using Frank.Templates.Microservice.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();

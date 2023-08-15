@@ -1,4 +1,6 @@
-﻿namespace Microservice.Tests.Services;
+﻿using Frank.Templates.Microservice.Services;
+
+namespace Frank.Templates.Microservice.Tests.Services;
 
 public class CompanyServiceTests
 {

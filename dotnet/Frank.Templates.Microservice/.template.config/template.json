@@ -2,13 +2,13 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "Frank R. Haugen",
   "classifications": [ "Common", "Microservice" ],
-  "identity": "Microservice",
-  "name": "Microservice",
-  "description": "Microservice",
-  "shortName": "microservice",
-  "sourceName": "Microservice",
+  "identity": "frankmicroservice",
+  "name": "Frank.Templates.Microservice",
+  "description": "Frank.Templates.Microservice is a template for creating a microservice in C#.",
+  "shortName": "frankmicroservice",
+  "sourceName": "Frank.Templates.Microservice",
   "tags": {
     "language": "C#",
-    "type": "project"
+    "type": "solution"
   }
 }

@@ -1,6 +1,4 @@
-﻿using Microservice.Models.Companies;
-
-namespace Microservice.Client.Models.Responses
+﻿namespace Frank.Templates.Microservice.Client.Models.Responses
 {
     public class CompanyResponse
     {

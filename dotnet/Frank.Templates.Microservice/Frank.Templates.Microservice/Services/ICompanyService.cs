@@ -1,5 +1,8 @@
-﻿using Microservice.Models.Companies;
+﻿using Frank.Templates.Microservice.Models.Companies;
+
 using RestSharp;
+
+namespace Frank.Templates.Microservice.Services;
 
 public interface ICompanyService
 {

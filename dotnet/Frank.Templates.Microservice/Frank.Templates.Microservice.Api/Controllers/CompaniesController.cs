@@ -1,9 +1,12 @@
 using AutoMapper;
-using Microservice.Client.Models.Responses;
-using Microservice.Models.Companies;
+
+using Frank.Templates.Microservice.Client.Models.Responses;
+using Frank.Templates.Microservice.Models.Companies;
+using Frank.Templates.Microservice.Services;
+
 using Microsoft.AspNetCore.Mvc;
 
-namespace Microservice.Api.Controllers;
+namespace Frank.Templates.Microservice.Api.Controllers;
 
 [ApiController]
 [Route("[controller]")]

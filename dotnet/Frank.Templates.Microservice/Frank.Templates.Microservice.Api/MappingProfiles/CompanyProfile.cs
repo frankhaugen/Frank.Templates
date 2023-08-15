@@ -1,8 +1,9 @@
 ﻿using AutoMapper;
-using Microservice.Client.Models.Responses;
-using Microservice.Models.Companies;
 
-namespace Microservice.Api.MappingProfiles
+using Frank.Templates.Microservice.Client.Models.Responses;
+using Frank.Templates.Microservice.Models.Companies;
+
+namespace Frank.Templates.Microservice.Api.MappingProfiles
 {
     public class CompanyProfile : Profile
     {

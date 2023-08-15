@@ -3,20 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice", "Microservice\Microservice.csproj", "{89EEE06C-FBF5-45DD-B386-2A4FEFDEA8FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Templates.Microservice", "Frank.Templates.Microservice\Frank.Templates.Microservice.csproj", "{89EEE06C-FBF5-45DD-B386-2A4FEFDEA8FA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Api", "Microservice.Api\Microservice.Api.csproj", "{F7EAA20E-3831-4CEE-A765-D9E192C92E08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Templates.Microservice.Api", "Frank.Templates.Microservice.Api\Frank.Templates.Microservice.Api.csproj", "{F7EAA20E-3831-4CEE-A765-D9E192C92E08}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Client", "Microservice.Client\Microservice.Client.csproj", "{CB930182-A05E-4F97-ACF7-CFC1C14E3E04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Templates.Microservice.Client", "Frank.Templates.Microservice.Client\Frank.Templates.Microservice.Client.csproj", "{CB930182-A05E-4F97-ACF7-CFC1C14E3E04}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Client.Models", "Microservice.Client.Models\Microservice.Client.Models.csproj", "{93898F7D-B8A0-4CBA-B09B-62F8CA474A90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Templates.Microservice.Client.Models", "Frank.Templates.Microservice.Client.Models\Frank.Templates.Microservice.Client.Models.csproj", "{93898F7D-B8A0-4CBA-B09B-62F8CA474A90}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Tests", "Microservice.Tests\Microservice.Tests.csproj", "{821F71ED-A3B1-4A1B-A9C7-533371C994A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Templates.Microservice.Tests", "Frank.Templates.Microservice.Tests\Frank.Templates.Microservice.Tests.csproj", "{821F71ED-A3B1-4A1B-A9C7-533371C994A8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{47E0B774-6EA8-43CE-81E6-10D7B0F69831}"
 	ProjectSection(SolutionItems) = preProject
 		nuget.config = nuget.config
 		readme.md = readme.md
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		build.ps1 = build.ps1
+		Directory.Build.props = Directory.Build.props
+		install.ps1 = install.ps1
+		push.ps1 = push.ps1
+		test.ps1 = test.ps1
+		uninstall.ps1 = uninstall.ps1
 	EndProjectSection
 EndProject
 Global

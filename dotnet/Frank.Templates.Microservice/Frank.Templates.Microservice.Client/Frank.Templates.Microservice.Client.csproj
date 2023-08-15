@@ -7,11 +7,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="RestSharp" Version="108.0.1" />
+        <PackageReference Include="RestSharp" Version="110.2.0" />
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Microservice.Client.Models\Microservice.Client.Models.csproj" />
+        <ProjectReference Include="..\Frank.Templates.Microservice.Client.Models\Frank.Templates.Microservice.Client.Models.csproj" />
     </ItemGroup>
 
 </Project>

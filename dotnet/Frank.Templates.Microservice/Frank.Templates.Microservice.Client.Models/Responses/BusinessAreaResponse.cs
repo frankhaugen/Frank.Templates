@@ -1,4 +1,4 @@
-﻿namespace Microservice.Models.Companies
+﻿namespace Frank.Templates.Microservice.Client.Models.Responses
 {
     public class BusinessAreaResponse
     {
