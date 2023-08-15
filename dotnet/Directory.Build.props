@@ -6,6 +6,5 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="**\.idea" />
   </ItemGroup>
 </Project>
