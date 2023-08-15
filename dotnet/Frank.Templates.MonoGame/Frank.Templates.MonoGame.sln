@@ -8,6 +8,19 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.Templates.MonoGame.Tests", "Frank.Templates.MonoGame.Tests\Frank.Templates.MonoGame.Tests.csproj", "{63D10E3F-F984-4587-A1B8-FC83FB293C1D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{E3F6CCCF-C205-492A-9EFF-A4739472017A}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		build.ps1 = build.ps1
+		Directory.Build.props = Directory.Build.props
+		install.ps1 = install.ps1
+		nuget.config = nuget.config
+		push.ps1 = push.ps1
+		README.md = README.md
+		test.ps1 = test.ps1
+		uninstall.ps1 = uninstall.ps1
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
