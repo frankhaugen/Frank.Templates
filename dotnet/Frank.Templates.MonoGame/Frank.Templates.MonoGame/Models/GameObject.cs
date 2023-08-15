@@ -1,5 +1,4 @@
-﻿using Frank.Libraries.Calculators.FluentCalculation;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using MonoGame.Extended.Shapes;
 using Frank.Templates.MonoGame.Extensions;
 
@@ -48,7 +47,7 @@ public class GameObject : ITransform, IRigidbody
 
 public static class PolygonFactory
 {
-	public static Polygon GetSquare(float width, float height) => new Rectangle(Vector2.Zero.X.ToInt(), Vector2.Zero.Y.ToInt(), width.ToInt(), height.ToInt()).GetPolygon();
+	public static Polygon GetSquare(float width, float height) => new Rectangle((int)Vector2.Zero.X, (int)Vector2.Zero.Y, (int)width, (int)height).GetPolygon();
 	public static Polygon GetCircle(float radius, int sides) => CreateCircle(radius, sides).ToPolygon();
 
 
