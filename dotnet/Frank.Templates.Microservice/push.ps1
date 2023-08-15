@@ -1,8 +1,8 @@
 # Define parameters
 param (
-    [string]$Version,
-    [string]$NuGetApiKey,
-    [string]$NuGetFeedUrl = "https://api.nuget.org/v3/index.json"
+    [Parameter(Mandatory=$true)][string]$Version,
+    [Parameter(Mandatory=$true)][string]$NuGetApiKey,
+    [Parameter(Mandatory=$true)][string]$NuGetFeedUrl = "https://api.nuget.org/v3/index.json"
 )
 
 # Get template name from directory name

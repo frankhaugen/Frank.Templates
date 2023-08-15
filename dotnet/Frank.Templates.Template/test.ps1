@@ -1,6 +1,6 @@
 # Define parameters
 param (
-    [string]$Version
+    [Parameter(Mandatory=$true)][string]$Version
 )
 
 # Get template name from directory name
