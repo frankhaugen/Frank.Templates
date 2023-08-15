@@ -1,9 +1,9 @@
 using System.Globalization;
 using System.Runtime.InteropServices;
 
-using WpfWithoutXaml.Windows;
+using Frank.Templates.NoXaml.Solution.Windows;
 
-namespace WpfWithoutXaml;
+namespace Frank.Templates.NoXaml.Solution;
 
 public class Program
 {

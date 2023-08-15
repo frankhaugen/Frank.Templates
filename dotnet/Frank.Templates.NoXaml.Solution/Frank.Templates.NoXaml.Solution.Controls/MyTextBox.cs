@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Controls;
 
-namespace WpfWithoutXaml.Controls;
+namespace Frank.Templates.NoXaml.Solution.Controls;
 
 public class MyTextBox : GroupBox
 {

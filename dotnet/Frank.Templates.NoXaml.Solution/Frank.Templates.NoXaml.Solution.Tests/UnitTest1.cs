@@ -1,4 +1,4 @@
-namespace WpfWithoutXaml.Tests;
+namespace Frank.Templates.NoXaml.Solution.Tests;
 
 public class UnitTest1
 {

@@ -1,4 +1,4 @@
-﻿namespace WpfWithoutXaml.Core;
+﻿namespace Frank.Templates.NoXaml.Solution.Core;
 
 public interface ITemperatureConverterService
 {

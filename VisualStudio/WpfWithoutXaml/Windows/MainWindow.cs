@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 
-namespace WpfWithoutXaml.Windows;
+namespace Frank.Templates.NoXaml.Solution.Windows;
 
 public class MainWindow : Window
 {

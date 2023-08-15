@@ -1,4 +1,4 @@
-﻿namespace WpfWithoutXaml.Models;
+﻿namespace Frank.Templates.NoXaml.Solution.Models;
 
 public enum TemperatureScale
 {

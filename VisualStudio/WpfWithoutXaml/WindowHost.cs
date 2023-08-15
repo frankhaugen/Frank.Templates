@@ -1,9 +1,9 @@
 ﻿using System.Runtime.InteropServices;
 using System.Windows;
 
-using WpfWithoutXaml.Windows;
+using Frank.Templates.NoXaml.Solution.Windows;
 
-namespace WpfWithoutXaml;
+namespace Frank.Templates.NoXaml.Solution;
 
 public class WindowHost : BackgroundService
 {

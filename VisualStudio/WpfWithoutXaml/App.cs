@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace WpfWithoutXaml;
+namespace Frank.Templates.NoXaml.Solution;
 
 public class App : Application
 {

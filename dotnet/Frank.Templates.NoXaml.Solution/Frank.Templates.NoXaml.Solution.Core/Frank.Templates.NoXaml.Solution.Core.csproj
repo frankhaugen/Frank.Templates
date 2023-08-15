@@ -7,7 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\WpfWithoutXaml.Models\WpfWithoutXaml.Models.csproj" />
+        <ProjectReference Include="..\Frank.Templates.NoXaml.Solution.Models\Frank.Templates.NoXaml.Solution.Models.csproj" />
     </ItemGroup>
 
 </Project>
