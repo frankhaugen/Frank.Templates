@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
+using Microsoft.Extensions.Hosting;
 
 namespace PureWpfApp.Extensions;
 

@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
+using Microsoft.Extensions.Logging;
 
 namespace PureWpfApp;
 
