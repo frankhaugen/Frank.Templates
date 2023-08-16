@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageVersion>0.0.1-preview</PackageVersion>
+
+    <PackageType>Template</PackageType>
+    <PackageId>Frank.Templates</PackageId>
+    <Title>Frank.Templates</Title>
+    <Authors>Frank R. Haugen</Authors>
+    <Description>A collection of templates</Description>
+    <PackageTags>dotnet-new;templates;Frank;Pack;ML;Template,MonoGame;Project;Solution</PackageTags>
+
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="dotnet\**\*" Exclude="dotnet\**\bin\**;dotnet\**\obj\**" />
+    <Compile Remove="**\*" />
+  </ItemGroup>
+</Project>
