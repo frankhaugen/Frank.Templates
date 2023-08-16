@@ -35,5 +35,4 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Publish
-      working-directory: src
       run: dotnet nuget push "**/Frank.Templates.${{ steps.find.outputs.tag }}.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json --skip-duplicate
