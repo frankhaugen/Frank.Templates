@@ -23,15 +23,11 @@ jobs:
        repository: ${{ github.repository }}
        releases-only: true   
     - name: Pack
-      working-directory: src
       run: dotnet pack --configuration Release -p:Version=${{ steps.find.outputs.tag }} -v m
-    
     - uses: AButler/upload-release-assets@v2.0
       with:
         files: "**/Frank.Templates.${{ steps.find.outputs.tag }}.nupkg"
         repo-token: ${{ secrets.GITHUB_TOKEN }}
-    
     - name: Publish
       working-directory: src
       run: dotnet nuget push "**/Frank.Templates.${{ steps.find.outputs.tag }}.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json --skip-duplicate
-    
