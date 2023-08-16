@@ -1,7 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageVersion>0.0.1-preview</PackageVersion>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
 
     <PackageType>Template</PackageType>
     <PackageId>Frank.Templates</PackageId>
@@ -9,6 +10,7 @@
     <Authors>Frank R. Haugen</Authors>
     <Description>A collection of templates</Description>
     <PackageTags>dotnet-new;templates;Frank;Pack;ML;Template,MonoGame;Project;Solution</PackageTags>
+    <PackageIcon>icon.png</PackageIcon>
 
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>
