@@ -20,5 +20,13 @@
   <ItemGroup>
     <Content Include="dotnet\**\*" Exclude="dotnet\**\bin\**;dotnet\**\obj\**" />
     <Compile Remove="**\*" />
+    <Content Include="icon.png" PackagePath="icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="README.md" PackagePath="README.md">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
+
+
 </Project>
