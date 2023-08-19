@@ -31,4 +31,4 @@ jobs:
       run: dotnet pack --configuration Release -p:Version=${{ steps.find.outputs.tag }} -p:PackageVersion=${{ steps.find.outputs.tag }} -v m
     
     - name: Publish
-      run: dotnet nuget push "Frank.Templates.${{ steps.find.outputs.tag }}.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json --skip-duplicate
+      run: dotnet nuget push "/home/runner/work/Frank.Templates/Frank.Templates/bin/Release/Frank.Templates.${{ steps.find.outputs.tag }}.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json --skip-duplicate
