@@ -24,5 +24,10 @@ Write-Host "Packing NuGet packages..." -ForegroundColor DarkCyan
 dotnet pack --configuration $configuration --output $packageDir /p:Version=$version /p:PackageVersion=$version -v m
 Write-Host "NuGet packages have been packed." -ForegroundColor Green
 
+# Clean up
+Write-Host "Cleaning up..." -ForegroundColor DarkCyan
+dotnet clean --configuration $configuration -v m
+Write-Host "Clean up completed." -ForegroundColor Green
+
 # Exit with a success code
 exit 0
