@@ -4,6 +4,7 @@
 name: Release
 
 on:
+  workflow_dispatch:
   release:
     branches: master
     type: published
