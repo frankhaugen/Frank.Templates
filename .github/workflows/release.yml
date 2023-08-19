@@ -22,18 +22,13 @@ jobs:
         
     - name: Find Latest Tag
       id: find
-      uses: oprypin/find-latest-tag@v1.0.4
+      uses: oprypin/find-latest-tag@v1.1.1
       with:
        repository: ${{ github.repository }}
        releases-only: true   
        
     - name: Pack
-      run: dotnet pack --output "/artifacts" --configuration Release -p:Version=${{ steps.find.outputs.tag }} -p:PackageVersion=${{ steps.find.outputs.tag }} -v m
-    
-    - uses: AButler/upload-release-assets@v2.0
-      with:
-        files: "/artifacts/Frank.Templates.${{ steps.find.outputs.tag }}.nupkg"
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+      run: dotnet pack --configuration Release -p:Version=${{ steps.find.outputs.tag }} -p:PackageVersion=${{ steps.find.outputs.tag }} -v m
     
     - name: Publish
-      run: dotnet nuget push "/artifacts/Frank.Templates.${{ steps.find.outputs.tag }}.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json --skip-duplicate
+      run: dotnet nuget push "Frank.Templates.${{ steps.find.outputs.tag }}.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json --skip-duplicate
