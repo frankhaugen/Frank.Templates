@@ -27,7 +27,7 @@ jobs:
        releases-only: true   
        
     - name: Pack
-      run: dotnet pack --output artifacts --configuration Release -p:Version=${{ steps.find.outputs.tag }} -p:PackageVersion=${{ steps.find.outputs.tag }} -v m
+      run: dotnet pack --output "/artifacts" --configuration Release -p:Version=${{ steps.find.outputs.tag }} -p:PackageVersion=${{ steps.find.outputs.tag }} -v m
     
     - uses: AButler/upload-release-assets@v2.0
       with:
