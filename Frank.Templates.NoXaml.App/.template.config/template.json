@@ -5,7 +5,7 @@
   "identity": "Frank.Templates.NoXaml.App",
   "name": "Wpf app Without Xaml",
   "description": "For the crazy people that love WPF but don't want to write a lot of XAML-code",
-  "shortName": "franknoxamlapp",
+  "shortName": "noxamlapp",
   "sourceName": "Frank.Templates.NoXaml.App",
   "tags": {
     "language": "C#",
