@@ -3,9 +3,9 @@
   "author": "Frank R. Haugen",
   "classifications": [ "Common", "WPF", "NoXaml" ],
   "identity": "Frank.Templates.NoXaml.Solution",
-  "name": "NoXaml WPF Solution",
+  "name": "Frank.Templates.NoXaml.Solution",
   "description": "For the crazy people that love WPF but don't want to write a lot of XAML-code (like me).",
-  "shortName": "franknoxamlsolution",
+  "shortName": "noxamlsolution",
   "sourceName": "Frank.Templates.NoXaml.Solution",
   "tags": {
     "language": "C#",
