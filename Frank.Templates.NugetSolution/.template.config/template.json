@@ -1,14 +1,14 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "Frank R. Haugen",
-  "classifications": [ "Common", "WPF" ],
-  "identity": "Frank.Templates.NoXaml.App",
-  "name": "Wpf app Without Xaml",
-  "description": "For the crazy people that love WPF but don't want to write a lot of XAML-code",
-  "shortName": "noxamlapp",
-  "sourceName": "Frank.Templates.NoXaml.App",
+  "classifications": [ "Common", "Nuget", "Library", "Solution" ],
+  "identity": "Frank.Templates.NugetSolution",
+  "name": "Frank.Templates.NugetSolution",
+  "description": "To create a new solution for a nuget library aimed at GitHub and Nuget.org hosting.",
+  "shortName": "nugetsln",
+  "sourceName": "Frank.Templates.NugetSolution",
   "tags": {
     "language": "C#",
-    "type": "project"
+    "type": "solution"
   }
 }
