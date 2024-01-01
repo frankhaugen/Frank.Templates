@@ -34,7 +34,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Frank.Templates.*/**" />
+    <Content Include="../Frank.Templates.Generator/**" />
+    <Content Include="../Frank.Templates.Microservice/**" />
+    <Content Include="../Frank.Templates.MonoGame/**" />
+    <Content Include="../Frank.Templates.NoXaml.App/**" />
+    <Content Include="../Frank.Templates.NoXaml.Solution/**" />
+    <Content Include="../Frank.Templates.NugetSolution/**" />
+    <Content Include="../Frank.Templates.Template/**" />
   </ItemGroup>
 
   <ItemGroup>
