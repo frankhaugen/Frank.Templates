@@ -1,7 +1,9 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "Frank R. Haugen",
-  "classifications": [ "Common" ],
+  "classifications": [
+    "Common"
+  ],
   "identity": "Frank.Templates.Template",
   "name": "Frank.Templates.Template",
   "description": "Template for creating a new template",

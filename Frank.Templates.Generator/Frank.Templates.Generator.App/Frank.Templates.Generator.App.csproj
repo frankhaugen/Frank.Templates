@@ -1,11 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-  </PropertyGroup>
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Frank.Templates.Generator\Frank.Templates.Generator.csproj" ReferenceOutputAssembly="false" OutputItemType="Analyzer" />
-  </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Frank.Templates.Generator\Frank.Templates.Generator.csproj" ReferenceOutputAssembly="false" OutputItemType="Analyzer"/>
+    </ItemGroup>
 
 </Project>

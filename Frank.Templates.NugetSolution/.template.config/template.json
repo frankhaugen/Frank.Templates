@@ -1,7 +1,12 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "Frank R. Haugen",
-  "classifications": [ "Common", "Nuget", "Library", "Solution" ],
+  "classifications": [
+    "Common",
+    "Nuget",
+    "Library",
+    "Solution"
+  ],
   "identity": "Frank.Templates.NugetSolution",
   "name": "Frank.Templates.NugetSolution",
   "description": "To create a new solution for a nuget library aimed at GitHub and Nuget.org hosting.",

@@ -1,7 +1,14 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "Frank R. Haugen",
-  "classifications": [ "Common", "roslyn", "code generator", "C#", "solution", "template" ],
+  "classifications": [
+    "Common",
+    "roslyn",
+    "code generator",
+    "C#",
+    "solution",
+    "template"
+  ],
   "identity": "Frank.Templates.Generator",
   "name": "Frank.Templates.Generator",
   "description": "A solution template for a C# code generator using roslyn.",

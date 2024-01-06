@@ -1,11 +1,15 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "Frank R. Haugen",
-  "classifications": [ "Common", "WPF", "NoXaml" ],
+  "classifications": [
+    "Common",
+    "WPF",
+    "NoXaml"
+  ],
   "identity": "Frank.Templates.NoXaml.Solution",
   "name": "Frank.Templates.NoXaml.Solution",
   "description": "For the crazy people that love WPF but don't want to write a lot of XAML-code (like me).",
-  "shortName": "noxamlsolution",
+  "shortName": "noxamlsln",
   "sourceName": "Frank.Templates.NoXaml.Solution",
   "tags": {
     "language": "C#",

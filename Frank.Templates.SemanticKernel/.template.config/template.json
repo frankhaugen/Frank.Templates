@@ -1,7 +1,11 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "Frank R. Haugen",
-  "classifications": [ "Common", "Semantic Kernel", "Semantic Kernel Template" ],
+  "classifications": [
+    "Common",
+    "Semantic Kernel",
+    "Semantic Kernel Template"
+  ],
   "identity": "Frank.Templates.SemanticKernel",
   "name": "Frank.Templates.SemanticKernel",
   "description": "Template for creating a new SemanticKernel project",

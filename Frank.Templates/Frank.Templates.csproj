@@ -1,54 +1,54 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <Description>Frank's .NET Templates</Description>
-    <PackageType>Template</PackageType>
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <Description>Frank's .NET Templates</Description>
+        <PackageType>Template</PackageType>
 
-    <IncludeContentInPack>true</IncludeContentInPack>
-    <IncludeBuildOutput>false</IncludeBuildOutput>
-    <ContentTargetFolders>content</ContentTargetFolders>
-    <IsPackable>true</IsPackable>
+        <IncludeContentInPack>true</IncludeContentInPack>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <ContentTargetFolders>content</ContentTargetFolders>
+        <IsPackable>true</IsPackable>
 
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <NoWarn>$(NoWarn);1591</NoWarn>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <NoWarn>$(NoWarn);1591</NoWarn>
 
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>portable</DebugType>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>portable</DebugType>
+        <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 
-    <Authors>Frank R. Haugen</Authors>
-    <PublisherName>Frank R. Haugen</PublisherName>
-    <Copyright>Copyright (c) 2024 Frank R. Haugen</Copyright>
+        <Authors>Frank R. Haugen</Authors>
+        <PublisherName>Frank R. Haugen</PublisherName>
+        <Copyright>Copyright (c) 2024 Frank R. Haugen</Copyright>
 
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageIcon>icon.png</PackageIcon>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://www.github.com/frankhaugen/Frank.Templates</PackageProjectUrl>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageIcon>icon.png</PackageIcon>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://www.github.com/frankhaugen/Frank.Templates</PackageProjectUrl>
 
-    <RepositoryUrl>https://www.github.com/frankhaugen/Frank.Templates</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-  </PropertyGroup>
+        <RepositoryUrl>https://www.github.com/frankhaugen/Frank.Templates</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <Content Include="../Frank.Templates.Generator/**" />
-    <Content Include="../Frank.Templates.Microservice/**" />
-    <Content Include="../Frank.Templates.MonoGame/**" />
-    <Content Include="../Frank.Templates.NoXaml.App/**" />
-    <Content Include="../Frank.Templates.NoXaml.Solution/**" />
-    <Content Include="../Frank.Templates.NugetSolution/**" />
-    <Content Include="../Frank.Templates.Template/**" />
-    <Content Include="../Frank.Templates.SemanticKernel/**" />
-  </ItemGroup>
+    <ItemGroup>
+        <Content Include="../Frank.Templates.Generator/**"/>
+        <Content Include="../Frank.Templates.Microservice/**"/>
+        <Content Include="../Frank.Templates.MonoGame/**"/>
+        <Content Include="../Frank.Templates.NoXaml.App/**"/>
+        <Content Include="../Frank.Templates.NoXaml.Solution/**"/>
+        <Content Include="../Frank.Templates.NugetSolution/**"/>
+        <Content Include="../Frank.Templates.Template/**"/>
+        <Content Include="../Frank.Templates.SemanticKernel/**"/>
+    </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All"/>
-    <None Include="../README.md" Pack="true" PackagePath="\"/>
-    <None Include="../icon.png" Pack="true" PackagePath="\"/>
-    <InternalsVisibleTo Include="$(AssemblyName).Tests"/>
-    <InternalsVisibleTo Include="LINQPadQuery"/>
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All"/>
+        <None Include="../README.md" Pack="true" PackagePath="\"/>
+        <None Include="../icon.png" Pack="true" PackagePath="\"/>
+        <InternalsVisibleTo Include="$(AssemblyName).Tests"/>
+        <InternalsVisibleTo Include="LINQPadQuery"/>
+    </ItemGroup>
 </Project>
