@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Frank R. Haugen",
+  "classifications": [
+    "Common",
+    "Solution"
+  ],
+  "identity": "Frank.Templates.GitHubSolution",
+  "name": "Frank.Templates.GitHubSolution",
+  "description": "To create a new solution aimed at GitHub and Nuget.org hosting.",
+  "shortName": "githubsln",
+  "sourceName": "Frank.Templates.GitHubSolution",
+  "tags": {
+    "language": "C#",
+    "type": "solution"
+  }
+}
