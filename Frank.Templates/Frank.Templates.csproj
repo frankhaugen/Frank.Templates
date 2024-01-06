@@ -35,6 +35,7 @@
 
     <ItemGroup>
         <Content Include="../Frank.Templates.Generator/**"/>
+        <Content Include="../Frank.Templates.GitHubSolution/**"/>
         <Content Include="../Frank.Templates.Microservice/**"/>
         <Content Include="../Frank.Templates.MonoGame/**"/>
         <Content Include="../Frank.Templates.NoXaml.App/**"/>
