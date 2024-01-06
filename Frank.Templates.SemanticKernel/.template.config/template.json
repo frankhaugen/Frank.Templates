@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Frank R. Haugen",
+  "classifications": [ "Common", "Semantic Kernel", "Semantic Kernel Template" ],
+  "identity": "Frank.Templates.SemanticKernel",
+  "name": "Frank.Templates.SemanticKernel",
+  "description": "Template for creating a new SemanticKernel project",
+  "shortName": "semantic-kernel",
+  "sourceName": "Frank.Templates.SemanticKernel",
+  "tags": {
+    "language": "C#",
+    "type": "project",
+    "projectType": "console",
+    "platform": "dotnet"
+  }
+}

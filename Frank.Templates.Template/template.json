@@ -1,11 +1,11 @@
 {
   "$schema": "http://json.schemastore.org/template",
-  "author": "Frank R. Haugen",
+  "author": "Frank.Templates.Template",
   "classifications": [ "Common" ],
-  "identity": "franktemplate",
+  "identity": "Frank.Templates.Template",
   "name": "Frank.Templates.Template",
-  "description": "Let's see if we can't create a template file",
-  "shortName": "franktemplate",
+  "description": "Frank.Templates.Template",
+  "shortName": "Frank.Templates.Template",
   "sourceName": "Frank.Templates.Template",
   "tags": {
     "language": "template",

@@ -8,7 +8,9 @@
   "shortName": "frank-template",
   "sourceName": "Frank.Templates.Template",
   "tags": {
-    "language": "C#",
-    "type": "item"
+    "language": "template",
+    "type": "item",
+    "projectType": "template",
+    "platform": "dotnet"
   }
 }

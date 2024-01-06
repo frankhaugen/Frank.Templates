@@ -41,6 +41,7 @@
     <Content Include="../Frank.Templates.NoXaml.Solution/**" />
     <Content Include="../Frank.Templates.NugetSolution/**" />
     <Content Include="../Frank.Templates.Template/**" />
+    <Content Include="../Frank.Templates.SemanticKernel/**" />
   </ItemGroup>
 
   <ItemGroup>
