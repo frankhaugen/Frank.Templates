@@ -3,8 +3,7 @@
   "author": "Frank R. Haugen",
   "classifications": [
     "Common",
-    "Semantic Kernel",
-    "Semantic Kernel Template"
+    "Semantic Kernel"
   ],
   "identity": "Frank.Templates.SemanticKernel",
   "name": "Frank.Templates.SemanticKernel",
