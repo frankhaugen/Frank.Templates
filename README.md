@@ -18,15 +18,15 @@ ___
 
 ## Templates
 
-| Template                        | Description                                                   | Usage                                           |
-|---------------------------------|---------------------------------------------------------------|-------------------------------------------------|
-| Frank.Templates.Generator       | A template for a solution that contains a generator           | `dotnet new -i Frank.Templates.Generator`       |
-| Frank.Templates.Microservice    | A template for a microservice                                 | `dotnet new -i Frank.Templates.Microservice`    |
-| Frank.Templates.MonoGame        | A template for a MonoGame solution                            | `dotnet new -i Frank.Templates.MonoGame`        |
-| Frank.Templates.NoXaml.App      | A template for a WPF app project without XAML                 | `dotnet new -i Frank.Templates.NoXaml.App`      |
-| Frank.Templates.NoXaml.Solution | A template for a solution with a WPF app project without XAML | `dotnet new -i Frank.Templates.NoXaml.Solution` |
-| Frank.Templates.NugetSolution   | A template for a solution with a NuGet package project        | `dotnet new -i Frank.Templates.NugetSolution`   |
-| Frank.Templates.SemanticKernel  | A template for a SemanticKernel project                       | `dotnet new -i Frank.Templates.SemanticKernel`  |
+| Template                              | Description                                                   | Usage                                           |
+|---------------------------------------|---------------------------------------------------------------|-------------------------------------------------|
+| Frank.Templates.Microservice          | A template for a microservice                                 | `dotnet new -i Frank.Templates.Microservice`    |
+| Frank.Templates.MonoGame              | A template for a MonoGame solution                            | `dotnet new -i Frank.Templates.MonoGame`        |
+| Frank.Templates.NoXaml.App            | A template for a WPF app project without XAML                 | `dotnet new -i Frank.Templates.NoXaml.App`      |
+| Frank.Templates.NoXaml.Solution       | A template for a solution with a WPF app project without XAML | `dotnet new -i Frank.Templates.NoXaml.Solution` |
+| Frank.Templates.NugetSolution         | A template for a solution with a NuGet package project        | `dotnet new -i Frank.Templates.NugetSolution`   |
+| Frank.Templates.SemanticKernel        | A template for a SemanticKernel project                       | `dotnet new -i Frank.Templates.SemanticKernel`  |
+| Frank.Templates.TestContainerTemplate | A template for a solution                                     | `dotnet new -i Frank.Templates.Solution`        |
 
 ## How to use
 
