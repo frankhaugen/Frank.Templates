@@ -17,7 +17,10 @@ internal class GameWindow : Game, IGameWindow
 	public Vector2 Center { get; private set; }
 	public Game Game => this;
 
-	private SpriteFont _spriteFont;
+    /// <inheritdoc />
+    public new event EventHandler<EventArgs>? Exiting;
+
+    private SpriteFont _spriteFont;
 
 	public Point MousePosition { get; set; }
 
