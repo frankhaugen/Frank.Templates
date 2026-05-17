@@ -1,3 +1,5 @@
+> **Moved to Novolis:** This library is superseded by [\`Novolis.Templates\`](https://www.nuget.org/packages/Novolis.Templates) from [novolis-templates](https://github.com/Novolis-Platform/novolis-templates). This repository is archived; do not add features here.
+
 # Frank.Templates
 
 A collection of templates for things and stuff
